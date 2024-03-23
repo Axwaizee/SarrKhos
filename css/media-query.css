@@ -54,6 +54,6 @@
 @media (max-width: 550px) 
 {
     .products-gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
 }
