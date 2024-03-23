@@ -6,7 +6,9 @@ body {
     background-color: #000000;
     color: rgb(240, 248, 255);
 }
-
+#carouselExampleAutoplaying{
+    width: inherit;
+}
 
 
 .main-container {
