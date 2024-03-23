@@ -2,70 +2,7 @@ const products_gallery = document.getElementById('products-gallery');
 
 
 const types = ["men", 'women', 'kids'];
-const shoes1 = [
-    {
-      "name": "Nike Air Max 90",
-      "actual_price": 150,
-      "current_price": 120,
-      "description": "The Nike Air Max 90 is a classic shoe that features a leather and mesh upper, a visible Air-Sole unit in the heel for cushioning, and a rubber outsole for traction."
-    },
-    {
-      "name": "Adidas Superstar",
-      "actual_price": 80,
-      "current_price": 60,
-      "description": "The Adidas Superstar is a timeless sneaker that features a leather upper, a rubber shell toe, and a herringbone-pattern rubber outsole for grip."
-    },
-    {
-      "name": "Converse Chuck Taylor All Star",
-      "actual_price": 55,
-      "current_price": 50,
-      "description": "The Converse Chuck Taylor All Star is a versatile shoe that features a canvas upper, a rubber toe cap, and a vulcanized rubber outsole."
-    },
-    {
-      "name": "Vans Old Skool",
-      "actual_price": 65,
-      "current_price": 55,
-      "description": "The Vans Old Skool is a skateboarding shoe that features a suede and canvas upper, a padded collar for support and flexibility, and the Vans signature waffle outsole."
-    },
-    {
-      "name": "Puma Suede Classic",
-      "actual_price": 70,
-      "current_price": 60,
-      "description": "The Puma Suede Classic is a retro sneaker that features a suede upper, a padded collar for cushioning, and a rubber outsole for traction."
-    },
-    {
-      "name": "New Balance 574",
-      "actual_price": 80,
-      "current_price": 70,
-      "description": "The New Balance 574 is a sporty shoe that features a suede and mesh upper, a ENCAP midsole for support and durability, and a rubber outsole for traction."
-    },
-    {
-      "name": "Reebok Classic Leather",
-      "actual_price": 75,
-      "current_price": 65,
-      "description": "The Reebok Classic Leather is a timeless sneaker that features a soft leather upper, a die-cut EVA midsole for lightweight cushioning, and a high-abrasion rubber outsole for traction."
-    },
-    {
-      "name": "Timberland 6-Inch Premium Boot",
-      "actual_price": 190,
-      "current_price": 170,
-      "description": "The Timberland 6-Inch Premium Boot is a rugged and durable boot that features a waterproof leather upper, a padded collar for comfort, and a rubber lug outsole for traction."
-    },
-    {
-      "name": "Dr. Martens 1460",
-      "actual_price": 150,
-      "current_price": 130,
-      "description": "The Dr. Martens 1460 is an iconic boot that features a smooth leather upper, a cushioned insole for comfort, and an air-cushioned sole for shock absorption."
-    },
-    {
-      "name": "UGG Classic Short",
-      "actual_price": 160,
-      "current_price": 140,
-      "description": "The UGG Classic Short is a cozy boot that features a sheepskin upper, a plush wool lining, and a Treadlite by UGG outsole for lightweight traction and durability."
-    }
-  ];
-
-const shoe = [
+const shoes = [
     {
       "name": "Nike Air Max 90",
       "actual_price": "150",
@@ -251,7 +188,7 @@ const shoe = [
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    for (let i = 0; i < shoe.length; i++) {
+    for (let i = 0; i < shoes.length; i++) {
 
 
         const product = document.createElement('div');
@@ -271,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const product_name = document.createElement('div');
         product_name.classList += 'product-name';
-        product_name.textContent = shoe[i].name;
+        product_name.textContent = shoes[i].name;
 
         product.appendChild(product_name);
 
@@ -279,18 +216,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const product_price = document.createElement('div');
         product_price.classList += 'product-price';
 
-        product_price.innerHTML = `<span class="current-price-value"><span style="font-size: 16px;">₹</span>${shoe[i].current_price *9}</span><span class="original-product-price">₹${shoe[i].actual_price*9}</span>`
+        product_price.innerHTML = `<span class="current-price-value"><span style="font-size: 16px;">₹</span>${shoes[i].current_price *9}</span><span class="original-product-price">₹${shoes[i].actual_price*9}</span>`
 
 
         product.appendChild(product_price);
 
         const product_description = document.createElement('div');
         product_description.classList += 'product-description';
-        product_description.textContent = shoe[i].description;
+        product_description.textContent = shoes[i].description;
 
         product.appendChild(product_description);
-
-
 
 
         products_gallery.appendChild(product);

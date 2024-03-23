@@ -156,5 +156,5 @@ footer a {
 
 footer a:hover {
     font-weight: 600;
-    color: grey;
+    color: rgb(0, 0, 0);
 }
