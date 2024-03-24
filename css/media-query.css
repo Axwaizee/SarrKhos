@@ -36,9 +36,6 @@
     .category-btns {
         gap: 10px;
     }
-    .products-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(9rem, 9rem));
-    }
     .product{
         border-radius: 5px;
     }
@@ -51,9 +48,15 @@
     }
     
 }
-@media (max-width: 550px) 
+@media (max-width: 394px) 
 {
     .products-gallery {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 12em);
+    }
+}
+@media (max-width: 391px) 
+{
+    .products-gallery {
+        grid-template-columns: repeat(2, calc(100dvw/2.1));
     }
 }
