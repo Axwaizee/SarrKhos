@@ -228,6 +228,15 @@ document.addEventListener('DOMContentLoaded', function () {
     product.appendChild(product_description);
 
 
+    const buy_btn_container = document.createElement('div');
+
+    const buy_btn = document.createElement('button');
+    buy_btn.classList = `buy-now-btn`;
+    buy_btn.textContent = `Buy now`;
+    buy_btn_container.appendChild(buy_btn);
+    product.appendChild(buy_btn_container);
+
+
     products_gallery.appendChild(product);
 
   }
@@ -275,12 +284,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     display_selected_products();
   })
-  
-  
+
+
   const price_range_slider_input = document.getElementById('price-range-slider-input');
   const price_range_slider_output = document.getElementById('price-range-slider-output');
-  
-  
+
+
   price_range_slider_input.addEventListener('input', () => {
     price_range_slider_output.value = price_range_slider_input.value;
   });
@@ -290,8 +299,8 @@ document.addEventListener('DOMContentLoaded', function () {
   price_range_slider_output.addEventListener('blur', () => {
     price_range_slider_output.value = price_range_slider_input.value;
   });
-  
-  
+
+
   function display_selected_products() {
     all_products.forEach(element => {
       element.style.display = 'none';
